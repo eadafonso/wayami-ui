@@ -14,7 +14,7 @@ Wayami - UI (React UI Kit Library)
 - Funcionalidades pendentes: ()
 
 
-## Participants
+## Participantes
 
 | [Edvaldo Afonso](https://github.com/eadafonso) <br /> <br >
 | [Tarcisio Texeira](https://github.com/tarcisioteixeira)
