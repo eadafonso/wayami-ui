@@ -11,13 +11,17 @@ export const StyledButton = styled.button`
   border: ${({outlined, backgroundColor}: ButtonProps)=> 
   outlined ? `1px solid ${backgroundColor}}` : 'none'};
   font-weight: bold;
-  width: ${({block}: ButtonProps) => block ? '100%' : ''};
-
-
+  width: ${({width}: ButtonProps) => `${width}%` };
+  margin: ${({margin}: ButtonProps) => margin};
+  
   &:hover {
     filter: grayscale(.5);
     background: ${({backgroundColor, outlined}: ButtonProps) =>  
     outlined ? backgroundColor : ''};
     cursor: pointer;
+  }
+
+  .social-media {
+    display: none;
   }
 `;

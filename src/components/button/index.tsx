@@ -1,8 +1,9 @@
 import React, {ReactNode} from 'react';
 import {StyledButton} from './styles'
 export type componentSize = 'default' | 'sm' | 'large'
+import { margin } from '../../types'
 
-export interface ButtonProps {
+export interface GeneralProps {
   color?: string;
   backgroundColor?: string;
   width?: number;
@@ -16,12 +17,20 @@ export interface ButtonProps {
   children?: ReactNode;
 }
 
+export interface ButtonProps extends GeneralProps,margin {
+}
+
 export const Button: React.FC<ButtonProps> = ({
   color,
   backgroundColor,
   outlined,
   width,
   height,
+  margin,
+  marginTop,
+  marginBottom,
+  marginLeft,
+  marginRight,
   borderRadius,
   size,
   block,
@@ -35,7 +44,11 @@ export const Button: React.FC<ButtonProps> = ({
     color={color}
     outlined={outlined}
     borderRadius={borderRadius}
-    block
+    width={width}
+    margin={margin}
+    marginTop={marginTop}
+    marginBottom={marginBottom}
+    marginLeft={marginLeft}
     >{children}</StyledButton>
   );
 };
